@@ -9,9 +9,9 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      /* Sfondo caldo, elegante e privo di puntini */
-      background: linear-gradient(180deg, #f7f3eb 0%, #ede6d8 100%);
-      background-attachment: fixed;
+      /* Sfondo con trama a vignette e sagome di cani di varie forme e dimensioni */
+      background-color: #f7f3eb;
+      background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%20b78d4a' fill-opacity='0.12'%3E%3Cpath d='M20 20c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-5 4c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5zm10 0c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5zm-5 5c-1.7 0-3 1.3-3 3 0 1.5 1.5 3.5 3 4.5 1.5-1 3-3 3-4.5 0-1.7-1.3-3-3-3z'/%3E%3Cpath d='M80 70c-1.8 0-3.2 1.4-3.2 3.2s1.4 3.2 3.2 3.2 3.2-1.4 3.2-3.2-1.4-3.2-3.2-3.2zm-8 6.4c-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4 2.4-1.1 2.4-2.4-1.1-2.4-2.4-2.4zm16 0c-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4 2.4-1.1 2.4-2.4-1.1-2.4-2.4-2.4zm-8 8c-2.7 0-4.8 2.1-4.8 4.8 0 2.4 2.4 5.6 4.8 7.2 2.4-1.6 4.8-4.8 4.8-7.2 0-2.7-2.1-4.8-4.8-4.8z'/%3E%3Cpath d='M90 25a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-7 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm14 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-7 5c-3 0-6 2-6 5s3 7 6 9c3-2 6-6 6-9s-3-5-6-5z'/%3E%3Cpath d='M35 85a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm10 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5 4c-2 0-4 1.5-4 3.5s2 5 4 6.5c2-1.5 4-4.5 4-6.5s-2-3.5-4-3.5z'/%3E%3C/g%3E%3C/svg%3E");
       color: #2c3e50;
       line-height: 1.7;
     }
@@ -19,19 +19,52 @@
       background: linear-gradient(135deg, #1b3b2b 0%, #2e5a44 100%);
       color: #ffffff;
       text-align: center;
-      padding: 50px 20px;
+      padding: 45px 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       border-bottom: 5px solid #d4a359;
+      position: relative;
+    }
+    /* Cornice decorativa ricamata di impronte grandi e piccole */
+    .paw-border-header {
+      border: 3px dashed #d4a359;
+      border-radius: 20px;
+      padding: 25px 15px;
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+    .paw-border-header::before {
+      content: "🐾  🐾  🐶  🐾";
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #234735;
+      padding: 0 15px;
+      font-size: 1.2em;
+      border-radius: 10px;
+    }
+    .paw-border-header::after {
+      content: "🐾  🐶  🐾  🐾";
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #234735;
+      padding: 0 15px;
+      font-size: 1.2em;
+      border-radius: 10px;
     }
     header h1 {
-      margin: 0;
+      margin: 10px 0 5px 0;
       font-size: 2.8em;
       letter-spacing: 1px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     }
     header p {
-      font-size: 1.3em;
-      margin-top: 10px;
+      font-size: 1.25em;
+      margin: 5px 0 0 0;
       color: #f0f7f3;
     }
     .container {
@@ -40,7 +73,7 @@
       padding: 0 20px;
     }
     .card {
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.96);
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.08);
@@ -105,20 +138,17 @@
       font-weight: 800;
       letter-spacing: 1px;
     }
-    /* WhatsApp: fondo verde scuro nitido con testo ad alto contrasto */
     .btn-whatsapp {
       background-color: #008037;
       color: #fff9d6;
       border: 2px solid #005a26;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
     }
-    /* Chiamata principale */
     .btn-phone {
       background-color: #1b3b2b;
       color: #ffffff;
       border: 2px solid #0f241a;
     }
-    /* Chiamata secondaria */
     .btn-phone-secondary {
       background-color: #2e5a44;
       color: #ffffff;
@@ -138,8 +168,10 @@
 <body>
 
   <header>
-    <h1>🐾 Cani in Famiglia 🐾</h1>
-    <p>Ospitalità casalinga per i vostri amici a quattro zampe</p>
+    <div class="paw-border-header">
+      <h1>Cani in Famiglia</h1>
+      <p>Ospitalità casalinga per i vostri amici a quattro zampe</p>
+    </div>
   </header>
 
   <div class="container">
@@ -160,7 +192,7 @@
 
     <div class="card">
       <h2>Dove Siamo</h2>
-      <p>Ci troviamo a <strong>Livorno</strong>, in una zona tranquilla con ampio spazio verde dedicato ai nostri ospiti.</p>
+      <p>Ci troviamo a <strong>Collesalvetti</strong>, in una zona tranquilla con ampio spazio verde dedicato ai nostri ospiti.</p>
       <p><em>Indirizzo preciso e indicazioni stradali verranno forniti al momento del contatto per garantire la massima tranquillità alla struttura.</em></p>
     </div>
 
@@ -187,7 +219,7 @@
   </div>
 
   <div class="footer">
-    <p>&copy; Cani in Famiglia - Livorno - Tutti i diritti riservati</p>
+    <p>&copy; Cani in Famiglia - Collesalvetti - Tutti i diritti riservati</p>
   </div>
 
 </body>
