@@ -9,7 +9,6 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      /* Sfondo con trama a vignette e sagome di cani di varie forme e dimensioni */
       background-color: #f7f3eb;
       background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%20b78d4a' fill-opacity='0.12'%3E%3Cpath d='M20 20c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-5 4c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5zm10 0c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5zm-5 5c-1.7 0-3 1.3-3 3 0 1.5 1.5 3.5 3 4.5 1.5-1 3-3 3-4.5 0-1.7-1.3-3-3-3z'/%3E%3Cpath d='M80 70c-1.8 0-3.2 1.4-3.2 3.2s1.4 3.2 3.2 3.2 3.2-1.4 3.2-3.2-1.4-3.2-3.2-3.2zm-8 6.4c-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4 2.4-1.1 2.4-2.4-1.1-2.4-2.4-2.4zm16 0c-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4 2.4-1.1 2.4-2.4-1.1-2.4-2.4-2.4zm-8 8c-2.7 0-4.8 2.1-4.8 4.8 0 2.4 2.4 5.6 4.8 7.2 2.4-1.6 4.8-4.8 4.8-7.2 0-2.7-2.1-4.8-4.8-4.8z'/%3E%3Cpath d='M90 25a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-7 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm14 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-7 5c-3 0-6 2-6 5s3 7 6 9c3-2 6-6 6-9s-3-5-6-5z'/%3E%3Cpath d='M35 85a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm10 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5 4c-2 0-4 1.5-4 3.5s2 5 4 6.5c2-1.5 4-4.5 4-6.5s-2-3.5-4-3.5z'/%3E%3C/g%3E%3C/svg%3E");
       color: #2c3e50;
@@ -24,7 +23,6 @@
       border-bottom: 5px solid #d4a359;
       position: relative;
     }
-    /* Cornice decorativa ricamata di impronte grandi e piccole */
     .paw-border-header {
       border: 3px dashed #d4a359;
       border-radius: 20px;
@@ -104,6 +102,53 @@
       left: 0;
       top: 0;
     }
+
+    /* Galleria Fotografica */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #d4a359;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Griglia per affiancare i due video */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Rapporto 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 2px solid #d4a359;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: #000;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     .contact-buttons {
       display: flex;
       flex-direction: column;
@@ -190,6 +235,35 @@
       </ul>
     </div>
 
+    <!-- GALLERIA FOTOGRAFICA -->
+    <div class="card">
+      <h2>I Nostri Ambienti e i Nostri Ospiti</h2>
+      <p>Ecco alcuni scatti della nostra casa e del grande giardino recintato:</p>
+      <div class="gallery-grid">
+        <img src="foto_1.jpg" alt="Cani in Famiglia - Foto 1">
+        <img src="foto_2.jpg" alt="Cani in Famiglia - Foto 2">
+        <img src="foto_3.jpg" alt="Cani in Famiglia - Foto 3">
+      </div>
+    </div>
+
+    <!-- SEZIONE DOPPIO VIDEO YOUTUBE -->
+    <div class="card">
+      <h2>Guarda come si divertono i nostri ospiti</h2>
+      <p>I nostri amici a quattro zampe mentre giocano sereni nel nostro giardino:</p>
+      
+      <div class="video-grid">
+        <!-- Primo Video -->
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/uQu9EB6QEoE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Secondo Video -->
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/uQu9EB6QEoE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
     <div class="card">
       <h2>Dove Siamo</h2>
       <p>Ci troviamo a <strong>Collesalvetti</strong>, in una zona tranquilla con ampio spazio verde dedicato ai nostri ospiti.</p>
@@ -223,4 +297,3 @@
   </div>
 
 </body>
-</html>
