@@ -39,7 +39,6 @@
       margin: 40px auto;
       padding: 0 20px;
     }
-    /* Riquardi delle informazioni ridisegnati e più curati */
     .card {
       background: #ffffff;
       padding: 30px;
@@ -48,8 +47,6 @@
       margin-bottom: 30px;
       border: 1px solid #dcd3c1;
       border-top: 6px solid #2e5a44;
-      position: relative;
-      overflow: hidden;
     }
     h2 {
       color: #1b3b2b;
@@ -81,27 +78,39 @@
       margin-top: 25px;
     }
     .btn {
-      display: block;
-      text-align: center;
-      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 800;
-      font-size: 1.2em;
-      letter-spacing: 0.5px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: all 0.2s ease;
+      text-align: center;
     }
     .btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 18px rgba(0,0,0,0.22);
     }
-    /* WhatsApp: fondo verde scuro nitido con testo ad alto contrasto (Giallo/Bianco) */
+    .btn-label {
+      font-size: 0.95em;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+    .btn-number {
+      font-size: 1.3em;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    /* WhatsApp: fondo verde scuro nitido con testo ad alto contrasto */
     .btn-whatsapp {
       background-color: #008037;
       color: #fff9d6;
       border: 2px solid #005a26;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
     }
     /* Chiamata principale */
     .btn-phone {
@@ -160,9 +169,18 @@
       <p>Volete venire a trovarci o sapere di più sulla nostra ospitalità? Contattateci direttamente:</p>
       
       <div class="contact-buttons">
-        <a href="https://wa.me/393381210508" target="_blank" class="btn btn-whatsapp">💬 Scrivici su WhatsApp (338 1210508)</a>
-        <a href="tel:+393381210508" class="btn btn-phone">📞 Chiama il 338 1210508</a>
-        <a href="tel:+393513544952" class="btn btn-phone btn-phone-secondary">📞 Chiama il 351 3544952</a>
+        <a href="https://wa.me/393381210508" target="_blank" class="btn btn-whatsapp">
+          <span class="btn-label">💬 Scrivici su WhatsApp:</span>
+          <span class="btn-number">338 1210508</span>
+        </a>
+        <a href="tel:+393381210508" class="btn btn-phone">
+          <span class="btn-label">📞 Chiama il:</span>
+          <span class="btn-number">338 1210508</span>
+        </a>
+        <a href="tel:+393513544952" class="btn btn-phone btn-phone-secondary">
+          <span class="btn-label">📞 Chiama il:</span>
+          <span class="btn-number">351 3544952</span>
+        </a>
       </div>
     </div>
 
