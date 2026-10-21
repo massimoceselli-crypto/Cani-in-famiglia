@@ -128,7 +128,7 @@
       transform: scale(1.05);
     }
 
-    /* Griglia per affiancare i due video */
+    /* Griglia Video */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -204,6 +204,23 @@
       color: #ffffff;
       border: 2px solid #1e3d2e;
     }
+
+    /* Sezione QR Code */
+    .qr-section {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 2px dashed #d4a359;
+    }
+    .qr-section img {
+      width: 160px;
+      height: 160px;
+      border: 3px solid #1b3b2b;
+      border-radius: 12px;
+      padding: 5px;
+      background: #fff;
+    }
+
     .footer {
       text-align: center;
       padding: 30px 20px;
@@ -231,35 +248,37 @@
       <p>Quando dovete allontanarvi per lavoro o per vacanza, il vostro cane non deve vivere in una gabbia. Nella nostra struttura non esistono box o recinti isolati: i vostri fedeli compagni vivranno al chiuso in casa insieme a noi e alla nostra cagnolina, ricevendo lo stesso affetto e le stesse attenzioni di sempre.</p>
     </div>
 
+    <!-- CORRETTO: "lunghi" al punto 3 -->
     <div class="card">
       <h2>Spazio e Sicurezza Totale</h2>
       <ul>
         <li><strong>Ampio Giardino:</strong> Un grande spazio verde interamente recintato dove correre e giocare in totale libertà.</li>
         <li><strong>Protezione e Allarme:</strong> La proprietà è protetta da un sistema di allarme avanzato con sensori e fotocamere per la massima tranquillità.</li>
-        <li><strong>Soggiorni Brevi e Lunghi:</strong> Accogliamo i vostri cani sia per pochi giorni che per periodi medio-lungi.</li>
+        <li><strong>Soggiorni Brevi e Lunghi:</strong> Accogliamo i vostri cani sia per pochi giorni che per periodi medio-lunghi.</li>
       </ul>
     </div>
 
-    <!-- GALLERIA FOTOGRAFICA - 11 FOTO REALI SU GITHUB -->
+    <!-- GALLERIA CON NUOVO ORDINE FOTO: 1, 3, 9, 10, 11, 12, 16, 18, 19, 20, 23, 24 -->
     <div class="card">
       <h2>I Nostri Ambienti e i Nostri Ospiti</h2>
       <p>Tocca una foto per ingrandirla a schermo intero:</p>
       <div class="gallery-grid">
         <a href="foto_1.jpg" target="_blank"><img src="foto_1.jpg" alt="Foto 1"></a>
-        <a href="foto_2.jpg" target="_blank"><img src="foto_2.jpg" alt="Foto 2"></a>
         <a href="foto_3.jpg" target="_blank"><img src="foto_3.jpg" alt="Foto 3"></a>
-        <a href="foto_6.jpg" target="_blank"><img src="foto_6.jpg" alt="Foto 6"></a>
         <a href="foto_9.jpg" target="_blank"><img src="foto_9.jpg" alt="Foto 9"></a>
         <a href="foto_10.jpg" target="_blank"><img src="foto_10.jpg" alt="Foto 10"></a>
         <a href="foto_11.jpg" target="_blank"><img src="foto_11.jpg" alt="Foto 11"></a>
+        <a href="foto_12.jpg" target="_blank"><img src="foto_12.jpg" alt="Foto 12"></a>
         <a href="foto_16.jpg" target="_blank"><img src="foto_16.jpg" alt="Foto 16"></a>
         <a href="foto_18.jpg" target="_blank"><img src="foto_18.jpg" alt="Foto 18"></a>
+        <a href="foto_19.jpg" target="_blank"><img src="foto_19.jpg" alt="Foto 19"></a>
         <a href="foto_20.jpg" target="_blank"><img src="foto_20.jpg" alt="Foto 20"></a>
+        <a href="foto_23.jpg" target="_blank"><img src="foto_23.jpg" alt="Foto 23"></a>
         <a href="foto_24.jpg" target="_blank"><img src="foto_24.jpg" alt="Foto 24"></a>
       </div>
     </div>
 
-    <!-- SEZIONE DOPPIO VIDEO YOUTUBE -->
+    <!-- CORRETTO: VIDEO SHORT COLLIE CON ACCESSO DIRETTO E SCHERMO INTERO -->
     <div class="card">
       <h2>Guarda come si divertono i nostri ospiti</h2>
       <p>I nostri amici a quattro zampe mentre giocano sereni nel nostro giardino:</p>
@@ -267,12 +286,12 @@
       <div class="video-grid">
         <!-- Primo Video -->
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/uQu9EB6QEoE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/uQu9EB6QEoE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
-        <!-- Secondo Video -->
+        <!-- Secondo Video (Collie Short) -->
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/-tR3DPjOux4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/-tR3DPjOux4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -283,6 +302,7 @@
       <p><em>Indirizzo preciso e indicazioni stradali verranno forniti al momento del contatto per garantire la massima tranquillità alla struttura.</em></p>
     </div>
 
+    <!-- SEZIONE CONTATTI E NUOVO QR CODE -->
     <div class="card">
       <h2>Contatti e Informazioni</h2>
       <p>Volete venire a trovarci o sapere di più sulla nostra ospitalità? Contattateci direttamente:</p>
@@ -300,6 +320,11 @@
           <span class="btn-label">📞 Chiama il:</span>
           <span class="btn-number">351 3544952</span>
         </a>
+      </div>
+
+      <div class="qr-section">
+        <p><strong>Scansiona il QR Code per accedere o condividere la pagina:</strong></p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cesellimassimo.github.io" alt="QR Code Sito Cani in Famiglia">
       </div>
     </div>
 
